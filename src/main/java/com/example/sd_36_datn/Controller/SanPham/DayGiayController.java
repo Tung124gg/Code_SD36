@@ -1,9 +1,9 @@
-package com.example.sd_57_datn.Controller.SanPham;
+package com.example.sd_36_datn.Controller.SanPham;
 
 
-import com.example.sd_57_datn.Model.DayGiay;
-import com.example.sd_57_datn.Repository.SanPham.ThuocTinh.DayGiayRepository;
-import com.example.sd_57_datn.Service.SanPham.DayGiayService;
+import com.example.sd_36_datn.Model.DayGiay;
+import com.example.sd_36_datn.Repository.SanPham.ThuocTinh.DayGiayRepository;
+import com.example.sd_36_datn.Service.SanPham.DayGiayService;
 import jakarta.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;

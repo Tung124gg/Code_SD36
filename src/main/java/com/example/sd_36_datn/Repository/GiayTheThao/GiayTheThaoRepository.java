@@ -1,6 +1,6 @@
-package com.example.sd_57_datn.Repository.GiayTheThao;
+package com.example.sd_36_datn.Repository.GiayTheThao;
 
-import com.example.sd_57_datn.Model.GiayTheThao;
+import com.example.sd_36_datn.Model.GiayTheThao;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -36,6 +36,8 @@ public interface GiayTheThaoRepository extends JpaRepository<GiayTheThao, UUID> 
     int countGttInCtgg();
     @Query("select giayTheThao from GiayTheThao giayTheThao where giayTheThao.thuongHieu.id = ?1")
     List<GiayTheThao> findByThuongHieu(UUID id);
+
+
 
 
 }

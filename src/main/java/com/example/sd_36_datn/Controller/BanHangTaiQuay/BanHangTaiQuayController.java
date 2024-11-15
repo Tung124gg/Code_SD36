@@ -1,11 +1,11 @@
-package com.example.sd_57_datn.Controller.BanHangTaiQuay;
+package com.example.sd_36_datn.Controller.BanHangTaiQuay;
 
-import com.example.sd_57_datn.Model.HoaDonChiTiet;
-import com.example.sd_57_datn.Service.GiamGia.ChuongTrinhGiamGiaHoaDonService;
-import com.example.sd_57_datn.Service.GiayTheThao.GiayTheThaoChiTietService;
-import com.example.sd_57_datn.Service.HoaDon.HoaDonChiTietServie;
-import com.example.sd_57_datn.Service.HoaDon.HoaDonService;
-import com.example.sd_57_datn.Service.KhachHang.KhachHangService;
+import com.example.sd_36_datn.Model.HoaDonChiTiet;
+import com.example.sd_36_datn.Service.GiamGia.ChuongTrinhGiamGiaHoaDonService;
+import com.example.sd_36_datn.Service.GiayTheThao.GiayTheThaoChiTietService;
+import com.example.sd_36_datn.Service.HoaDon.HoaDonChiTietServie;
+import com.example.sd_36_datn.Service.HoaDon.HoaDonService;
+import com.example.sd_36_datn.Service.KhachHang.KhachHangService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

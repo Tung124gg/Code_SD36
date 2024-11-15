@@ -1,7 +1,7 @@
-package com.example.sd_57_datn.Model;
+package com.example.sd_36_datn.Model;
 
 
-import com.example.sd_57_datn.Model.Enum.RoleEnum;
+import com.example.sd_36_datn.Model.Enum.RoleEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

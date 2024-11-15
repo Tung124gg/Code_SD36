@@ -1,6 +1,6 @@
-package com.example.sd_57_datn.ThanhToan;
+package com.example.sd_36_datn.ThanhToan;
 
-import com.example.sd_57_datn.Service.GioHangService;
+import com.example.sd_36_datn.Service.GioHangService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

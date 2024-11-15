@@ -1,6 +1,6 @@
-package com.example.sd_57_datn.dto;
+package com.example.sd_36_datn.dto;
 
-import com.example.sd_57_datn.Model.GiayTheThao;
+import com.example.sd_36_datn.Model.GiayTheThao;
 import lombok.Getter;
 
 @Getter

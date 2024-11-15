@@ -1,9 +1,9 @@
-package com.example.sd_57_datn.Home;
-
-import com.example.sd_57_datn.Model.GioHangChiTiet;
-import com.example.sd_57_datn.Service.GiayTheThao.GiayTheThaoService;
-import com.example.sd_57_datn.Service.GioHangService;
-import com.example.sd_57_datn.Service.SanPham.ThuongHieuService;
+package com.example.sd_36_datn.Home;
+import com.example.sd_36_datn.Model.GioHangChiTiet;
+import com.example.sd_36_datn.Service.GiayTheThao.GiayTheThaoService;
+import com.example.sd_36_datn.Service.GioHangService;
+import com.example.sd_36_datn.Service.SanPham.ThuongHieuService;
+import com.oracle.wls.shaded.org.apache.bcel.generic.ATHROW;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -25,8 +26,14 @@ public class HomeController {
 
     @ModelAttribute("gioHang")
     public List<GioHangChiTiet> createGioHang(HttpSession session) {
-        UUID maKhachHang = UUID.fromString(session.getAttribute("maKH").toString());
-        return cartService.getListGioHangChiTiet(maKhachHang);
+        Object maKhachHangAttr = session.getAttribute("maKH");
+        if (maKhachHangAttr != null) {
+            UUID maKhachHang = UUID.fromString(maKhachHangAttr.toString());
+            return cartService.getListGioHangChiTiet(maKhachHang);
+        } else {
+            // Xử lý khi maKH là null (trả về danh sách rỗng hoặc logic khác nếu cần)
+            return  new ArrayList<>(); // hoặc throw exception tùy vào yêu cầu của bạn
+        }
     }
 
     @GetMapping("/")

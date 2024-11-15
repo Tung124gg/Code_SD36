@@ -1,8 +1,8 @@
-package com.example.sd_57_datn.Service.GiayTheThao;
+package com.example.sd_36_datn.Service.GiayTheThao;
 
-import com.example.sd_57_datn.Model.GiayTheThao;
-import com.example.sd_57_datn.Repository.GiayTheThao.GiayTheThaoRepository;
-import com.example.sd_57_datn.Service.impl.GiayTheThaoImpl;
+import com.example.sd_36_datn.Model.GiayTheThao;
+import com.example.sd_36_datn.Repository.GiayTheThao.GiayTheThaoRepository;
+import com.example.sd_36_datn.Service.impl.GiayTheThaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

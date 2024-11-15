@@ -21,6 +21,7 @@
         Thương Hiệu
     </h1>
     <div>
+        <%--@elvariable id="th" type=""--%>
         <sf:form
                 modelAttribute="th"
                 action="${action}"

@@ -1,19 +1,20 @@
-package com.example.sd_36_datn_tung.Controller.SanPham;
-
-import com.example.sd_36_datn_tung.Model.GiayTheThao;
-import com.example.sd_36_datn_tung.Model.GiayTheThaoChiTiet;
-import com.example.sd_36_datn_tung.Model.GioHangChiTiet;
-import com.example.sd_36_datn_tung.Repository.GiayTheThao.ImageRepository;
-import com.example.sd_36_datn_tung.Service.GiayTheThao.GiayTheThaoChiTietService;
-import com.example.sd_36_datn_tung.Service.GiayTheThao.GiayTheThaoService;
-import com.example.sd_36_datn_tung.Service.SanPham.MauSacService;
-import com.example.sd_36_datn_tung.Service.SanPham.SizeService;
+package com.example.sd_36_datn.Controller.SanPham;
+import com.example.sd_36_datn.Model.GiayTheThao;
+import com.example.sd_36_datn.Model.GioHangChiTiet;
+import com.example.sd_36_datn.Repository.GiayTheThao.ImageRepository;
+import com.example.sd_36_datn.Service.GiayTheThao.GiayTheThaoChiTietService;
+import com.example.sd_36_datn.Service.GiayTheThao.GiayTheThaoService;
+import com.example.sd_36_datn.Service.SanPham.MauSacService;
+import com.example.sd_36_datn.Service.SanPham.SizeService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import java.util.List;
 import java.util.UUID;

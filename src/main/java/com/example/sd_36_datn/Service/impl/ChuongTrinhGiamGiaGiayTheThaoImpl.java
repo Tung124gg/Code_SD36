@@ -1,7 +1,7 @@
-package com.example.sd_57_datn.Service.impl;
+package com.example.sd_36_datn.Service.impl;
 
 
-import com.example.sd_57_datn.Model.ChuongTrinhGiamGiaGiayTheThao;
+import com.example.sd_36_datn.Model.ChuongTrinhGiamGiaGiayTheThao;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.multipart.MultipartFile;

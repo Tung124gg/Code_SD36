@@ -1,11 +1,11 @@
-package com.example.sd_57_datn.Controller.GiayTheThao;
+package com.example.sd_36_datn.Controller.GiayTheThao;
 
-import com.example.sd_57_datn.Model.*;
-import com.example.sd_57_datn.Repository.GiayTheThao.GiayTheThaoChiTietRepository;
-import com.example.sd_57_datn.Repository.GiayTheThao.GiayTheThaoRepository;
-import com.example.sd_57_datn.Repository.GiayTheThao.ImageRepository;
-import com.example.sd_57_datn.Repository.SanPham.ThuocTinh.*;
-import com.example.sd_57_datn.Service.GiayTheThao.GiayTheThaoService;
+import com.example.sd_36_datn.Model.*;
+import com.example.sd_36_datn.Repository.GiayTheThao.GiayTheThaoChiTietRepository;
+import com.example.sd_36_datn.Repository.GiayTheThao.GiayTheThaoRepository;
+import com.example.sd_36_datn.Repository.GiayTheThao.ImageRepository;
+import com.example.sd_36_datn.Repository.SanPham.ThuocTinh.*;
+import com.example.sd_36_datn.Service.GiayTheThao.GiayTheThaoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lowagie.text.DocumentException;
 import jakarta.servlet.ServletContext;

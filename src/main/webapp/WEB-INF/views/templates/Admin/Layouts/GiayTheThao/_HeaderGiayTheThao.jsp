@@ -67,7 +67,7 @@
     </script>
 
 </head>
-<body id="page-top">
+<body id="page-top" style="color: #f3a199">
 <!-- Page Wrapper -->
 <div id="wrapper">
     <!-- Sidebar -->
@@ -96,14 +96,10 @@
             <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
 <%--                    <h6 class="collapse-header" style="color: black; font-size: 13px;">Pages</h6>--%>
-                    <a class="collapse-item" href="/CoGiay/hien-thi">Cổ giầy</a>
-                    <a class="collapse-item" href="/chatLieu/hien-thi">Chất liệu</a>
                     <a class="collapse-item" href="/dayGiay/hien-thi">Dây giầy</a>
                     <a class="collapse-item" href="/MauSac/hien-thi">Màu sắc</a>
                     <a class="collapse-item" href="/Size/hien-thi">Size</a>
                     <a class="collapse-item" href="/thuongHieu/hien-thi">Thương hiệu</a>
-
-                    <a class="collapse-item" href="/LotGiay/hien-thi">Lót giầy</a>
                 </div>
             </div>
 
@@ -140,7 +136,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/Admin/xacNhanDonHangKhachHangAll">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Hóa đơn</span></a>
         </li>

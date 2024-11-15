@@ -1,9 +1,9 @@
-package com.example.sd_57_datn.Service.SanPham;
+package com.example.sd_36_datn.Service.SanPham;
 
 
-import com.example.sd_57_datn.Model.ThuongHieu;
-import com.example.sd_57_datn.Repository.SanPham.ThuocTinh.ThuongHieuRepository;
-import com.example.sd_57_datn.Service.impl.ThuongHieuImpl;
+import com.example.sd_36_datn.Model.ThuongHieu;
+import com.example.sd_36_datn.Repository.SanPham.ThuocTinh.ThuongHieuRepository;
+import com.example.sd_36_datn.Service.impl.ThuongHieuImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

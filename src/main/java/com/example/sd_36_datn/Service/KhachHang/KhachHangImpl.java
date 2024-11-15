@@ -1,8 +1,8 @@
-package com.example.sd_57_datn.Service.KhachHang;
+package com.example.sd_36_datn.Service.KhachHang;
 
 
 
-import com.example.sd_57_datn.Model.KhachHang;
+import com.example.sd_36_datn.Model.KhachHang;
 
 import java.util.UUID;
 

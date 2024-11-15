@@ -1,10 +1,10 @@
-package com.example.sd_57_datn.Controller.KhachHang;
+package com.example.sd_36_datn.Controller.KhachHang;
 
 
-import com.example.sd_57_datn.Model.KhachHang;
-import com.example.sd_57_datn.Repository.KhachHang.KhachHangRepository;
-import com.example.sd_57_datn.Service.KhachHang.KhachHangImpl;
-import com.example.sd_57_datn.Service.KhachHang.KhachHangService;
+import com.example.sd_36_datn.Model.KhachHang;
+import com.example.sd_36_datn.Repository.KhachHang.KhachHangRepository;
+import com.example.sd_36_datn.Service.KhachHang.KhachHangImpl;
+import com.example.sd_36_datn.Service.KhachHang.KhachHangService;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -22,13 +22,10 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springframework.web.servlet.view.RedirectView;
 
 import java.io.File;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.UUID;
@@ -107,7 +104,6 @@ public class KhachHangController {
         return "/templates/Users/Layouts/Log/dangKyTaiKhoanThanhCong";
 
     }
-
 //    //Todo code đăng ký tài khoản khách hàng
     @GetMapping("/view-createDanngKy")
     public String create(Model model){
@@ -116,7 +112,6 @@ public class KhachHangController {
         return "/templates/Users/Layouts/DangNhap/Register";
 
     }
-
     @PostMapping(value = "/create")
     public String create(@Valid
                          @ModelAttribute("khachHang") KhachHang khachHang,
@@ -129,37 +124,27 @@ public class KhachHangController {
                          HttpSession session,
                          @RequestParam("file") MultipartFile file
         ){
-
         if (result.hasErrors()){
 
             return "/templates/Users/Layouts/DangNhap/Register";
-
         }
-
-
         //Check trống thành phố
         if(quocGia1 == null || quocGia1.isEmpty() || quocGia1.trim().length() ==0){
 
             model.addAttribute("erCheckThanhPhoNull","Địa chỉ thành phố không được để trống!");
             return "/templates/Users/Layouts/DangNhap/Register";
-
         }
-
         if(thanhPho1 == null || thanhPho1.isEmpty() || thanhPho1.trim().length() ==0){
 
             model.addAttribute("erCheckHuyenNull","Địa chỉ quận huyện không được để trống!");
             return "/templates/Users/Layouts/DangNhap/Register";
-
         }
-
         if(diaChi1 == null || diaChi1.trim().length() ==0 || diaChi1.isEmpty()){
 
             model.addAttribute("erCheckXaNull","Địa chỉ xã không được để trống!");
             return "/templates/Users/Layouts/DangNhap/Register";
 
         }
-
-
         //Check trống email
         if(khachHang.getEmail() == null
             || khachHang.getEmail().isEmpty()

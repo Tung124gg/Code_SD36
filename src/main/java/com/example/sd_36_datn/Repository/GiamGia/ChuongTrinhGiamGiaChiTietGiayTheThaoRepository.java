@@ -1,9 +1,9 @@
-package com.example.sd_57_datn.Repository.GiamGia;
+package com.example.sd_36_datn.Repository.GiamGia;
 
 
-import com.example.sd_57_datn.Model.ChuongTrinhGiamGiaChiTietGiayTheThao;
-import com.example.sd_57_datn.Model.ChuongTrinhGiamGiaGiayTheThao;
-import com.example.sd_57_datn.Model.GiayTheThao;
+import com.example.sd_36_datn.Model.ChuongTrinhGiamGiaChiTietGiayTheThao;
+import com.example.sd_36_datn.Model.ChuongTrinhGiamGiaGiayTheThao;
+import com.example.sd_36_datn.Model.GiayTheThao;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

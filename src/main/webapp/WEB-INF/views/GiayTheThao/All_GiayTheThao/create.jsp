@@ -33,17 +33,7 @@
                     enctype="multipart/form-data"
             >
     <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label>Chất liệu</label>
-                        <span style="color: red">*</span>
-                        <select  class="form-control" name="chatLieu.id">
-                            <c:forEach items="${chatLieu}" var="chatLieu">
-                                <c:if test="${chatLieu.trangThai eq 1}">
-                                    <option value="${chatLieu.id}">${chatLieu.tenChatLieu}</option>
-                                </c:if>
-                            </c:forEach>
-                        </select>
-                    </div>
+
 
 
                     <div class="form-group col-md-6">
@@ -70,8 +60,6 @@
                             </c:forEach>
                         </select>
                     </div>
-
-
                     <div class="form-group col-md-6">
                         <label>Tên giầy thể thao</label>
                         <span style="color: red">*</span>

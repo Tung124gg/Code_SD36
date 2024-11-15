@@ -1,8 +1,8 @@
-package com.example.sd_57_datn.AdminController;
+package com.example.sd_36_datn.AdminController;
 
-import com.example.sd_57_datn.Service.GiayTheThao.GiayTheThaoChiTietService;
-import com.example.sd_57_datn.Service.HoaDon.HoaDonService;
-import com.example.sd_57_datn.Service.KhachHang.KhachHangService;
+import com.example.sd_36_datn.Service.GiayTheThao.GiayTheThaoChiTietService;
+import com.example.sd_36_datn.Service.HoaDon.HoaDonService;
+import com.example.sd_36_datn.Service.KhachHang.KhachHangService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

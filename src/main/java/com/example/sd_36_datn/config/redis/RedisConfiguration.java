@@ -1,4 +1,4 @@
-package com.example.sd_57_datn.config.redis;
+package com.example.sd_36_datn.config.redis;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

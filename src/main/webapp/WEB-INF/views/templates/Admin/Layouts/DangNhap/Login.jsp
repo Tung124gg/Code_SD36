@@ -38,6 +38,7 @@
                 <img src="https://airproductionservice.com/wp-content/uploads/2021/05/Login.jpg" alt="IMG">
             </div>
 
+            <%--@elvariable id="user" type=""--%>
             <frm:form modelAttribute="user"
                       action="${pageContext.request.contextPath}/UserLog/login"
                       method="POST" class="login100-form validate-form">

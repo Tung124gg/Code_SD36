@@ -1,13 +1,13 @@
-package com.example.sd_57_datn.Home;
+package com.example.sd_36_datn.Home;
 
 
-import com.example.sd_57_datn.Model.GiayTheThao;
-import com.example.sd_57_datn.Model.GiayTheThaoChiTiet;
-import com.example.sd_57_datn.Service.GiayTheThao.GiayTheThaoChiTietService;
-import com.example.sd_57_datn.Service.GiayTheThao.GiayTheThaoService;
-import com.example.sd_57_datn.Service.SanPham.MauSacService;
-import com.example.sd_57_datn.Service.SanPham.SizeService;
-import com.example.sd_57_datn.Service.SanPham.ThuongHieuService;
+import com.example.sd_36_datn.Model.GiayTheThao;
+import com.example.sd_36_datn.Model.GiayTheThaoChiTiet;
+import com.example.sd_36_datn.Service.GiayTheThao.GiayTheThaoChiTietService;
+import com.example.sd_36_datn.Service.GiayTheThao.GiayTheThaoService;
+import com.example.sd_36_datn.Service.SanPham.MauSacService;
+import com.example.sd_36_datn.Service.SanPham.SizeService;
+import com.example.sd_36_datn.Service.SanPham.ThuongHieuService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

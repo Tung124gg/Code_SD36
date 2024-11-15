@@ -78,7 +78,7 @@
                 <i class="fas fa-laugh-wink"></i>
             </div>
             <div class="sidebar-brand-text mx-3">
-                    BEE SHOES
+                    TungAha
             </div>
         </a>
         <!-- Divider -->
@@ -102,11 +102,7 @@
             </a>
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link" href="/thongKeChuanData">
-                <i class="fas fa-fw fa-chart-area"></i>
-                <span>Thống kê</span></a>
-        </li>
+
         <li class="nav-item">
             <a class="nav-link" href="/BanHangTaiQuay">
                 <i class="fas fa-fw fa-table"></i>

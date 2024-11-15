@@ -1,7 +1,7 @@
-package com.example.sd_57_datn.Repository.HoaDon;
+package com.example.sd_36_datn.Repository.HoaDon;
 
 
-import com.example.sd_57_datn.Model.HoaDon;
+import com.example.sd_36_datn.Model.HoaDon;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

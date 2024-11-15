@@ -1,9 +1,9 @@
-package com.example.sd_57_datn.Repository.SanPham;
+package com.example.sd_36_datn.Repository.SanPham;
 
 
-import com.example.sd_57_datn.Model.GiayTheThaoChiTiet;
-import com.example.sd_57_datn.Model.GioHang;
-import com.example.sd_57_datn.Model.GioHangChiTiet;
+import com.example.sd_36_datn.Model.GiayTheThaoChiTiet;
+import com.example.sd_36_datn.Model.GioHang;
+import com.example.sd_36_datn.Model.GioHangChiTiet;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

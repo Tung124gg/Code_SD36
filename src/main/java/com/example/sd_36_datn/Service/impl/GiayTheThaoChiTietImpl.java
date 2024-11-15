@@ -1,8 +1,8 @@
-package com.example.sd_57_datn.Service.impl;
+package com.example.sd_36_datn.Service.impl;
 
 
 
-import com.example.sd_57_datn.Model.GiayTheThaoChiTiet;
+import com.example.sd_36_datn.Model.GiayTheThaoChiTiet;
 
 import java.util.UUID;
 

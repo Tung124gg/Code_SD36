@@ -1,7 +1,7 @@
-package com.example.sd_57_datn.Service.HoaDon;
+package com.example.sd_36_datn.Service.HoaDon;
 
 
-import com.example.sd_57_datn.Model.HoaDon;
+import com.example.sd_36_datn.Model.HoaDon;
 import org.springframework.data.domain.Page;
 
 import java.util.UUID;

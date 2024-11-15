@@ -1,11 +1,11 @@
-package com.example.sd_57_datn.Service.GiamGia;
+package com.example.sd_36_datn.Service.GiamGia;
 
 
-import com.example.sd_57_datn.Model.ChuongTrinhGiamGiaChiTietGiayTheThao;
-import com.example.sd_57_datn.Model.ChuongTrinhGiamGiaGiayTheThao;
-import com.example.sd_57_datn.Model.GiayTheThao;
-import com.example.sd_57_datn.Repository.GiamGia.ChuongTrinhGiamGiaChiTietGiayTheThaoRepository;
-import com.example.sd_57_datn.Service.impl.ChuongTrinhGiamGiaChiTietGiayTheThaoImpl;
+import com.example.sd_36_datn.Model.ChuongTrinhGiamGiaChiTietGiayTheThao;
+import com.example.sd_36_datn.Model.ChuongTrinhGiamGiaGiayTheThao;
+import com.example.sd_36_datn.Model.GiayTheThao;
+import com.example.sd_36_datn.Repository.GiamGia.ChuongTrinhGiamGiaChiTietGiayTheThaoRepository;
+import com.example.sd_36_datn.Service.impl.ChuongTrinhGiamGiaChiTietGiayTheThaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

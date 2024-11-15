@@ -1,6 +1,6 @@
-package com.example.sd_57_datn.Repository.KhachHang;
+package com.example.sd_36_datn.Repository.KhachHang;
 
-import com.example.sd_57_datn.Model.KhachHang;
+import com.example.sd_36_datn.Model.KhachHang;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

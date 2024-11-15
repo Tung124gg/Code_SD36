@@ -1,7 +1,7 @@
-package com.example.sd_57_datn.config;
+package com.example.sd_36_datn.config;
 
-import com.example.sd_57_datn.filter.adminInterceptor;
-import com.example.sd_57_datn.filter.LogGinInterceptor;
+import com.example.sd_36_datn.filter.adminInterceptor;
+import com.example.sd_36_datn.filter.LogGinInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -105,11 +105,5 @@ public class WebMVCConfig implements WebMvcConfigurer {
                         "/Admin/HoaDon/DonHangBiHuy"
 
                         );
-
     }
-
-
-
-
-
 }

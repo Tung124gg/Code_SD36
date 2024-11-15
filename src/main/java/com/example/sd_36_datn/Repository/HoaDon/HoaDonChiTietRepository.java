@@ -1,9 +1,9 @@
-package com.example.sd_57_datn.Repository.HoaDon;
+package com.example.sd_36_datn.Repository.HoaDon;
 
 
-import com.example.sd_57_datn.Model.GiayTheThaoChiTiet;
-import com.example.sd_57_datn.Model.HoaDon;
-import com.example.sd_57_datn.Model.HoaDonChiTiet;
+import com.example.sd_36_datn.Model.GiayTheThaoChiTiet;
+import com.example.sd_36_datn.Model.HoaDon;
+import com.example.sd_36_datn.Model.HoaDonChiTiet;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

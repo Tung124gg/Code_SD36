@@ -1,8 +1,8 @@
-package com.example.sd_57_datn.Repository.GiayTheThao;
+package com.example.sd_36_datn.Repository.GiayTheThao;
 
 
-import com.example.sd_57_datn.Model.GiayTheThao;
-import com.example.sd_57_datn.Model.Image;
+import com.example.sd_36_datn.Model.GiayTheThao;
+import com.example.sd_36_datn.Model.Image;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

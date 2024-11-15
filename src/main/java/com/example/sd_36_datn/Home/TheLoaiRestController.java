@@ -1,10 +1,10 @@
-package com.example.sd_57_datn.Home;
+package com.example.sd_36_datn.Home;
 
-import com.example.sd_57_datn.Model.GiayTheThao;
-import com.example.sd_57_datn.Model.GiayTheThaoChiTiet;
-import com.example.sd_57_datn.Service.GiayTheThao.GiayTheThaoChiTietService;
-import com.example.sd_57_datn.Service.GiayTheThao.GiayTheThaoService;
-import com.example.sd_57_datn.dto.ProductDTO;
+import com.example.sd_36_datn.Model.GiayTheThao;
+import com.example.sd_36_datn.Model.GiayTheThaoChiTiet;
+import com.example.sd_36_datn.Service.GiayTheThao.GiayTheThaoChiTietService;
+import com.example.sd_36_datn.Service.GiayTheThao.GiayTheThaoService;
+import com.example.sd_36_datn.dto.ProductDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

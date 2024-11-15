@@ -1,8 +1,8 @@
-package com.example.sd_57_datn.GioHang;
+package com.example.sd_36_datn.GioHang;
 
-import com.example.sd_57_datn.Model.GioHangChiTiet;
-import com.example.sd_57_datn.Service.GiamGia.ChuongTrinhGiamGiaHoaDonService;
-import com.example.sd_57_datn.Service.GioHangService;
+import com.example.sd_36_datn.Model.GioHangChiTiet;
+import com.example.sd_36_datn.Service.GiamGia.ChuongTrinhGiamGiaHoaDonService;
+import com.example.sd_36_datn.Service.GioHangService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -34,17 +34,37 @@ public class GioHangController {
             RedirectAttributes model,
             HttpSession session) {
         try {
-            UUID maKhachHang = UUID.fromString(session.getAttribute("maKh").toString());
+            // Kiểm tra xem có maKhachHang trong session hay không (người dùng đã đăng nhập)
+            Object maKhachHangObj = session.getAttribute("maKh");
+            if (maKhachHangObj == null) {
+                // Nếu không có maKhachHang trong session, chuyển hướng đến trang đăng nhập
+                model.addFlashAttribute("error", "Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng.");
+                return "redirect:UserLog/login"; // Đảm bảo rằng đường dẫn này là đúng với URL của trang đăng nhập
+            }
+
+            // Chuyển đổi maKhachHang từ session
+            UUID maKhachHang = UUID.fromString(maKhachHangObj.toString());
+
+            // Thêm sản phẩm vào giỏ hàng
             GioHangChiTiet gioHangChiTiet = cartService.addToCart(chiTietId, soLuong, maKhachHang);
+
+            // Cập nhật giỏ hàng trong session
             session.setAttribute("gioHang", cartService.getListGioHangChiTiet(maKhachHang));
+
+            // Thêm thông báo thành công
             model.addFlashAttribute("success", "Thêm sản phẩm vào giỏ hàng thành công");
+
+            // Chuyển hướng đến trang chi tiết sản phẩm
             return "redirect:/san-pham/" + gioHangChiTiet.getGiayTheThaoChiTiet().getGiayTheThao().getId();
         } catch (Exception e) {
+            // Xử lý ngoại lệ và thông báo lỗi
             model.addFlashAttribute("error", "Có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng: " + e.getMessage());
         }
-        return "redirect:/";
 
+        // Quay lại trang chủ hoặc trang khác khi có lỗi
+        return "redirect:/";
     }
+
 
     @GetMapping("/delete/{id}")
     public String xoaSanPhamKhoiGioHang(@PathVariable UUID id, HttpSession session) {

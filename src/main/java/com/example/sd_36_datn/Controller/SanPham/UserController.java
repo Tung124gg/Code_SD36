@@ -1,8 +1,8 @@
-package com.example.sd_57_datn.Controller.SanPham;
+package com.example.sd_36_datn.Controller.SanPham;
 
-import com.example.sd_57_datn.Model.User;
-import com.example.sd_57_datn.Repository.SanPham.ThuocTinh.UserRepository;
-import com.example.sd_57_datn.Service.SanPham.UserService;
+import com.example.sd_36_datn.Model.User;
+import com.example.sd_36_datn.Repository.SanPham.ThuocTinh.UserRepository;
+import com.example.sd_36_datn.Service.SanPham.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

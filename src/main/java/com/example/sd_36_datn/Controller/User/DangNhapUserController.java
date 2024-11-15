@@ -1,11 +1,13 @@
-package com.example.sd_57_datn.Controller.User;
-
-import com.example.sd_57_datn.Model.User;
-import com.example.sd_57_datn.Repository.SanPham.ThuocTinh.UserRepository;
+package com.example.sd_36_datn.Controller.User;
+import com.example.sd_36_datn.Model.KhachHang;
+import com.example.sd_36_datn.Model.User;
+import com.example.sd_36_datn.Repository.KhachHang.KhachHangRepository;
+import com.example.sd_36_datn.Repository.SanPham.ThuocTinh.UserRepository;
+import com.example.sd_36_datn.dto.LoginDto;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -15,18 +17,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.Objects;
 import java.util.UUID;
 
 @Controller
 @RequestMapping(value = "/UserLog")
+@RequiredArgsConstructor
 public class DangNhapUserController {
 
-    @Autowired
-    private UserRepository userRepository;
-
-
-    @Autowired
-    ServletContext context;
+    private final UserRepository userRepository;
+    private final ServletContext context;
+    private final KhachHangRepository khachHangRepository;
 
     //Todo code check trùng email
     private boolean emailCheckTrung(String email){
@@ -58,7 +59,7 @@ public class DangNhapUserController {
     public String saveLoginForm(
 
             @Valid
-            @ModelAttribute("user") User user,
+            @ModelAttribute("user") LoginDto user,
             Model model,
             BindingResult result,
             RedirectAttributes attributes,
@@ -69,6 +70,15 @@ public class DangNhapUserController {
             System.out.println("Đăng nhập thất bại, lỗi");
             return "/templates/Admin/Layouts/DangNhap/Login";
 
+        }
+
+        if(Objects.equals(user.getLoginType(),"customer")){
+            KhachHang khachHang = khachHangRepository.findByEmailAndMatKhau(user.getEmail(),user.getMatKhau());
+            if(khachHang != null && khachHang.getTrangThai() == 0){
+                session.setAttribute("userLog",khachHang);
+                session.setAttribute("maKh",khachHang.getId());
+                return "redirect:/";
+            }
         }
 
         User userData = userRepository.findByEmailAndAndMatKhau(user.getEmail(),user.getMatKhau());

@@ -1,7 +1,7 @@
-package com.example.sd_57_datn.Repository.SanPham.ThuocTinh;
+package com.example.sd_36_datn.Repository.SanPham.ThuocTinh;
 
 
-import com.example.sd_57_datn.Model.ThuongHieu;
+import com.example.sd_36_datn.Model.ThuongHieu;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

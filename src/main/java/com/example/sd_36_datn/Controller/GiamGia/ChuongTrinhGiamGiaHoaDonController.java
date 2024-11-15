@@ -1,9 +1,9 @@
-package com.example.sd_57_datn.Controller.GiamGia;
+package com.example.sd_36_datn.Controller.GiamGia;
 
-import com.example.sd_57_datn.Model.ChuongTrinhGiamGiaChiTietHoaDon;
-import com.example.sd_57_datn.Model.ChuongTrinhGiamGiaHoaDon;
-import com.example.sd_57_datn.Service.GiamGia.ChuongTrinhGiamGiaChiTietHoaDonService;
-import com.example.sd_57_datn.Service.GiamGia.ChuongTrinhGiamGiaHoaDonService;
+import com.example.sd_36_datn.Model.ChuongTrinhGiamGiaChiTietHoaDon;
+import com.example.sd_36_datn.Model.ChuongTrinhGiamGiaHoaDon;
+import com.example.sd_36_datn.Service.GiamGia.ChuongTrinhGiamGiaChiTietHoaDonService;
+import com.example.sd_36_datn.Service.GiamGia.ChuongTrinhGiamGiaHoaDonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

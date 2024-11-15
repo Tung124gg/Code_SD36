@@ -1,8 +1,8 @@
-package com.example.sd_57_datn.Repository.SanPham.ThuocTinh;
+package com.example.sd_36_datn.Repository.SanPham.ThuocTinh;
 
 
-import com.example.sd_57_datn.Model.GiayTheThao;
-import com.example.sd_57_datn.Model.Size;
+import com.example.sd_36_datn.Model.GiayTheThao;
+import com.example.sd_36_datn.Model.Size;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

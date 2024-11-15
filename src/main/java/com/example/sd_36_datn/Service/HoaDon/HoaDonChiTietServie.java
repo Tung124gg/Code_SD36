@@ -1,12 +1,12 @@
-package com.example.sd_57_datn.Service.HoaDon;
+package com.example.sd_36_datn.Service.HoaDon;
 
 
-import com.example.sd_57_datn.Model.GiayTheThaoChiTiet;
-import com.example.sd_57_datn.Model.HoaDon;
-import com.example.sd_57_datn.Model.HoaDonChiTiet;
-import com.example.sd_57_datn.Repository.GiayTheThao.GiayTheThaoChiTietRepository;
-import com.example.sd_57_datn.Repository.HoaDon.HoaDonChiTietRepository;
-import com.example.sd_57_datn.Repository.HoaDon.HoaDonRepository;
+import com.example.sd_36_datn.Model.GiayTheThaoChiTiet;
+import com.example.sd_36_datn.Model.HoaDon;
+import com.example.sd_36_datn.Model.HoaDonChiTiet;
+import com.example.sd_36_datn.Repository.GiayTheThao.GiayTheThaoChiTietRepository;
+import com.example.sd_36_datn.Repository.HoaDon.HoaDonChiTietRepository;
+import com.example.sd_36_datn.Repository.HoaDon.HoaDonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

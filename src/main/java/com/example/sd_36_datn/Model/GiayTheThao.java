@@ -1,4 +1,4 @@
-package com.example.sd_57_datn.Model;
+package com.example.sd_36_datn.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

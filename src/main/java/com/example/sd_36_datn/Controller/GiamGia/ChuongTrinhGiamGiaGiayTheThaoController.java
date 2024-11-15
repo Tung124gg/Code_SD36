@@ -1,13 +1,13 @@
-package com.example.sd_57_datn.Controller.GiamGia;
+package com.example.sd_36_datn.Controller.GiamGia;
 
 
-import com.example.sd_57_datn.Model.ChuongTrinhGiamGiaChiTietGiayTheThao;
-import com.example.sd_57_datn.Model.ChuongTrinhGiamGiaGiayTheThao;
-import com.example.sd_57_datn.Model.GiayTheThao;
-import com.example.sd_57_datn.Service.GiamGia.ChuongTrinhGiamGiaChiTietGiayTheThaoService;
-import com.example.sd_57_datn.Service.GiamGia.ChuongTrinhGiamGiaGiayTheThaoService;
-import com.example.sd_57_datn.Service.GiayTheThao.GiayTheThaoChiTietService;
-import com.example.sd_57_datn.Service.GiayTheThao.GiayTheThaoService;
+import com.example.sd_36_datn.Model.ChuongTrinhGiamGiaChiTietGiayTheThao;
+import com.example.sd_36_datn.Model.ChuongTrinhGiamGiaGiayTheThao;
+import com.example.sd_36_datn.Model.GiayTheThao;
+import com.example.sd_36_datn.Service.GiamGia.ChuongTrinhGiamGiaChiTietGiayTheThaoService;
+import com.example.sd_36_datn.Service.GiamGia.ChuongTrinhGiamGiaGiayTheThaoService;
+import com.example.sd_36_datn.Service.GiayTheThao.GiayTheThaoChiTietService;
+import com.example.sd_36_datn.Service.GiayTheThao.GiayTheThaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

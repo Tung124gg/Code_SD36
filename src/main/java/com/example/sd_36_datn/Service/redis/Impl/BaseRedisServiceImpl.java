@@ -1,7 +1,7 @@
-package com.example.sd_57_datn.Service.redis.Impl;
+package com.example.sd_36_datn.Service.redis.Impl;
 
 
-import com.example.sd_57_datn.Service.redis.BaseRedisService;
+import com.example.sd_36_datn.Service.redis.BaseRedisService;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;

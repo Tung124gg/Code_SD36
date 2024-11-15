@@ -272,7 +272,6 @@
                                 </a>
                             </th>
                             <th style="padding-top: 5px; text-align: center; color: black">Thương hiệu</th>
-                            <th style="padding-top: 5px; text-align: center; color: black">Công dụng</th>
                             <th style="padding-top: 5px; text-align: center; color: black">Trạng thái</th>
                             <th style="padding-top: 5px; text-align: center; color: black">Functions</th>
                         </tr>
@@ -283,7 +282,6 @@
                             <tr class="product-item hide-row" data-tenGiayTheThao="${giayTheThao.tenGiayTheThao}"
                                 data-giaBan="${giayTheThao.giaBan}"
                                 data-thuongHieu="${giayTheThao.thuongHieu.tenThuongHieu}"
-                                data-congDung="${giayTheThao.congDung.tenCongDung}"
                                 data-trangThai="${giayTheThao.trangThai}">
 
 
@@ -295,7 +293,6 @@
 
                                 </td>
                                 <td style="padding-top: 3px; text-align: center; color: black">${giayTheThao.thuongHieu.tenThuongHieu}</td>
-                                <td style="padding-top: 3px; text-align: center; color: black">${giayTheThao.congDung.tenCongDung}</td>
                                 <td style="padding-top: 3px; text-align: center; color: black">${giayTheThao.trangThai == 1 ? "✔" : "✖"}</td>
                                 <td>
 
@@ -352,7 +349,6 @@
                             <th scope="col" style="text-align: center;color: black; width: 40px">#</th>
                             <th scope="col" style="text-align: center;color: black">Tên giầy thể thao</th>
                             <th scope="col" style="text-align: center;color: black">Image</th>
-                            <th scope="col" style="text-align: center;color: black">Công dụng</th>
 
                             <th scope="col" style="text-align: center;color: black">Giá bán VNĐ</th>
                             <th scope="col" style="text-align: center;color: black">Thương hiệu</th>
@@ -371,7 +367,6 @@
                                         <img style="width: 100px;margin-bottom: 10px"
                                              src="/upload/${giayTheThao.image.get(0).link}" alt="">
                                     </td>
-                                    <td style="padding-top: 20px; text-align: center; color: black">${giayTheThao.congDung.tenCongDung}</td>
                                     <td style="padding-top: 20px; text-align: center; color: black"><fmt:formatNumber
                                             type="" value="${giayTheThao.giaBan}" pattern="#,##0.###"/> VNĐ
                                     </td>
@@ -444,7 +439,6 @@
                             <th scope="col" style="text-align: center;color: black; width: 40px">#</th>
                             <th scope="col" style="text-align: center;color: black">Tên giầy thể thao</th>
                             <th scope="col" style="text-align: center;color: black">Image</th>
-                            <th scope="col" style="text-align: center;color: black">Công dụng</th>
 
 
                             <th scope="col" style="text-align: center;color: black">Giá bán VNĐ</th>
@@ -464,7 +458,6 @@
                                     <td style="padding-top: 20px; text-align: center; color: black">
                                         <span>NULL</span>
                                     </td>
-                                    <td style="padding-top: 20px; text-align: center; color: black">${giayTheThao.congDung.tenCongDung}</td>
 
                                         <%--                                    <td style="padding-top: 20px; text-align: center; color: black">${giayTheThao.gioiTinh}</td>--%>
                                     <td style="padding-top: 20px; text-align: center; color: black"><fmt:formatNumber

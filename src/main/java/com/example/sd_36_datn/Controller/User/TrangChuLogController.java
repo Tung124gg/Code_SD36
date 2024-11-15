@@ -1,8 +1,8 @@
-package com.example.sd_57_datn.Controller.User;
+package com.example.sd_36_datn.Controller.User;
 
-import com.example.sd_57_datn.Model.User;
-import com.example.sd_57_datn.Repository.SanPham.ThuocTinh.UserRepository;
-import com.example.sd_57_datn.Service.impl.UserServiceImpl;
+import com.example.sd_36_datn.Model.User;
+import com.example.sd_36_datn.Repository.SanPham.ThuocTinh.UserRepository;
+import com.example.sd_36_datn.Service.impl.UserServiceImpl;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;

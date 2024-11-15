@@ -21,6 +21,7 @@
         Thương hiệu
     </h1>
     <div>
+        <%--@elvariable id="th" type=""--%>
         <sf:form
                 modelAttribute="th"
                 action="create"
@@ -77,7 +78,6 @@
             <p style="text-align: right">
                 <button type="submit"style="margin-right: 0px; margin-bottom: 190px" class="btn btn-primary them">Thêm</button>
             </p>
-
         </sf:form>
     </div>
 </div>

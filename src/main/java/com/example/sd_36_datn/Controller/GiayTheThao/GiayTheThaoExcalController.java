@@ -1,6 +1,6 @@
-package com.example.sd_57_datn.Controller.GiayTheThao;
+package com.example.sd_36_datn.Controller.GiayTheThao;
 
-import com.example.sd_57_datn.Model.GiayTheThaoChiTiet;
+import com.example.sd_36_datn.Model.GiayTheThaoChiTiet;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.poi.ss.usermodel.Cell;
