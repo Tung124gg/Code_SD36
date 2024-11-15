@@ -1,21 +1,7 @@
-﻿create database SD36
+﻿ 
+create database SD36_2024_DATN
 go
-use SD36
-
----create bảng chất liệu
-create table ChatLieu
-(
-  
-     Id_ChatLieu			UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
-	 tenChatLieu			nvarchar(max)							null,
-	 ghiChu					nvarchar(max)							null,						
-	 ngayTao				Date									null,
-	 ngaySua				Date									null,
-	 trangThai				int										null
-
-)
-
-
+use SD36_2024_DATN
 
 ---create bảng Dây giầy
 create table DayGiay
@@ -43,15 +29,12 @@ create table ThuongHieu
 	trangThai						int										null
 
 )
-
 ---create bảng Sản Phẩm
 
 create table GiayTheThao
 (
+  
     Id_GiayTheThao              UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
-	Id_ChatLieu					UNIQUEIDENTIFIER							,
-	Id_LotGiay					UNIQUEIDENTIFIER							,
-	Id_DeGiay					UNIQUEIDENTIFIER						    ,
 	Id_DayGiay					UNIQUEIDENTIFIER							,
 	Id_ThuongHieu				UNIQUEIDENTIFIER							,
 	gioiTinh					nvarchar(5)								null,
@@ -63,11 +46,10 @@ create table GiayTheThao
 	ngayTao						Date									null,
 	ngaySua						Date									null,
 	trangThai					int										null
-	 Constraint FK_GiayTheThao_ChatLieu					Foreign key(Id_ChatLieu)			References ChatLieu,
-	 Constraint FK_GiayTheThao_LotGiay					Foreign key(Id_LotGiay)				References LotGiay,
+		 
+	
 	 Constraint FK_GiayTheThao_DayGiay					Foreign key(Id_DayGiay)				References DayGiay,
 	 Constraint FK_GiayTheThao_ThuongHieu				Foreign key(Id_ThuongHieu)			References ThuongHieu,
-
 
 )
 ---create bảng image
@@ -227,6 +209,7 @@ create table HoaDon
 	  hinhThucThanhToan				   int									   null,
 	  trangThaiMoney				   int									   null,
 	  trangThai					       int									   null,
+
 	 Constraint FK_HoaDon_KhachHang						Foreign key(Id_KhachHang)			References KhachHang,
 	 Constraint FK_HoaDon_Users							Foreign key(Id_User)				References Users,
 
@@ -325,6 +308,7 @@ create table GioHang
 	  ngaySua					Date									 null,
 	  trangThai					int										 null,
 
+	 Constraint FK_GioHang_Users						Foreign key(Id_User)						References Users,
 	 Constraint FK_GioHang_KhachHang					Foreign key(Id_KhachHang)					References KhachHang,
 
 )
@@ -349,15 +333,20 @@ create table GioHangChiTiet
 
 
 
+
+
+
 ---insert dữ liệu bảng chương trình giảm giá hóa đơn
 insert into ChuongTrinhGiamGiaHoaDon(tenChuongTrinh, phanTramGiam , soLuongSanPham , soTienHoaDon , ngayBatDau , ngayKetThuc , ghiChu ,ngayTao, trangThai) values(N'Chương trình khai xuân giảm giá hóa đơn',5,4,300000,'2023-09-27','2023-10-01',N'Chương trình giảm giá có hạn','2023-09-27',1)
 insert into ChuongTrinhGiamGiaHoaDon(tenChuongTrinh, phanTramGiam , soLuongSanPham , soTienHoaDon , ngayBatDau , ngayKetThuc , ghiChu ,ngayTao, trangThai) values(N'Chương trình vui tết trung thu',10,6,200000,'2023-09-27','2023-10-01',N'Chương trình giảm giá có hạn','2023-09-27',1)
 insert into ChuongTrinhGiamGiaHoaDon(tenChuongTrinh, phanTramGiam , soLuongSanPham , soTienHoaDon , ngayBatDau , ngayKetThuc , ghiChu ,ngayTao, trangThai) values(N'Chương trình vui tết thiếu nhi 1/6',20,4,300000,'2023-09-27','2023-10-01',N'Chương trình giảm giá có hạn','2023-09-27',1)
 insert into ChuongTrinhGiamGiaHoaDon(tenChuongTrinh, phanTramGiam , soLuongSanPham , soTienHoaDon , ngayBatDau , ngayKetThuc , ghiChu ,ngayTao, trangThai) values(N'Chương trình khai chương quán',5,4,300000,'2023-09-27','2023-10-01',N'Chương trình giảm giá có hạn','2023-09-27',1)
 
+
 select * from ChuongTrinhGiamGiaHoaDon
 ---delete from ChuongTrinhGiamGiaHoaDon where Id_ChuongTrinhGiamGiaHoaDon = '20750783-4D49-4C6E-8CEA-FD720529EA35'
 ---delete from ChuongTrinhGiamGiaHoaDon
+
 
 ---insert dữ liệu bảng chương trình giảm giá giầy thể thao
 insert into ChuongTrinhGiamGiaGiayTheThao(tenChuongTrinhGiamGia, phanTramGiam , ngayBatDau , ngayKetThuc , ghiChu ,ngayTao, trangThai) values(N'Chương trình giảm giá giầy thể thao 1/6',5,'2023-09-27','2023-10-01',N'Chương trình giảm giá có hạn','2023-09-27',1)
@@ -368,6 +357,34 @@ insert into ChuongTrinhGiamGiaGiayTheThao(tenChuongTrinhGiamGia, phanTramGiam , 
 select * from ChuongTrinhGiamGiaGiayTheThao
 ---delete from ChuongTrinhGiamGiaGiayTheThao where Id_ChuongTrinhGiamGiaGiayTheThao 
 ---delete from ChuongTrinhGiamGiaGiayTheThao
+
+
+
+---insert dữ liệu bảng form
+insert into Form(tenForm,ghiChu,ngayTao,ngaySua,trangThai) values(N'Form đẹp chất lượng cao', N'','2023-10-01','',1)
+insert into Form(tenForm,ghiChu,ngayTao,ngaySua,trangThai) values(N'Form đẹp chất lượng', N'','2023-10-01','',1)
+insert into Form(tenForm,ghiChu,ngayTao,ngaySua,trangThai) values(N'Form giầy đẹp cao cấp', N'','2023-10-01','',0)
+insert into Form(tenForm,ghiChu,ngayTao,ngaySua,trangThai) values(N'Form đẹp chất cao cấp', N'','2023-10-01','',1)
+insert into Form(tenForm,ghiChu,ngayTao,ngaySua,trangThai) values(N'Form đẹp mẫu mã đa dạng', N'','2023-10-01','',0)
+insert into Form(tenForm,ghiChu,ngayTao,ngaySua,trangThai) values(N'Form đẹp mũi cao', N'','2023-10-01','',0)
+insert into Form(tenForm,ghiChu,ngayTao,ngaySua,trangThai) values(N'Form giầy basic', N'','2023-10-01','',1)
+insert into Form(tenForm,ghiChu,ngayTao,ngaySua,trangThai) values(N'Form mẫu mã đẹp, đứng chân', N'','2023-10-01','',1)
+
+select * from Form
+
+---insert dữ liệu bảng công dụng
+insert into CongDung(tenCongDung,ghiChu,ngayTao,ngaySua,trangThai) values(N'Chống thấm mồ hôi chân',N'Tốt ốm chân','2023-10-02','',1)
+insert into CongDung(tenCongDung,ghiChu,ngayTao,ngaySua,trangThai) values(N'Chống thấm nước',N'','2023-10-05','',1)
+insert into CongDung(tenCongDung,ghiChu,ngayTao,ngaySua,trangThai) values(N'Chống trượt',N'Tốt ốm chân','2023-10-10','',0)
+insert into CongDung(tenCongDung,ghiChu,ngayTao,ngaySua,trangThai) values(N'Chống mướt không kích mũi chân',N'Tốt ốm chân','2023-10-02','',1)
+insert into CongDung(tenCongDung,ghiChu,ngayTao,ngaySua,trangThai) values(N'Chống va đập chấn thương đá bóng',N'Tốt ốm chân','2023-10-02','',0)
+insert into CongDung(tenCongDung,ghiChu,ngayTao,ngaySua,trangThai) values(N'Giảm thiểu sự va đập đau với đối phương',N'Tốt ốm chân','2023-10-02','',1)
+insert into CongDung(tenCongDung,ghiChu,ngayTao,ngaySua,trangThai) values(N'Hỗ trợ sút bóng tầm xa',N'Tốt ốm chân','2023-10-20','',0)
+insert into CongDung(tenCongDung,ghiChu,ngayTao,ngaySua,trangThai) values(N'Hỗ trợ đỡ bước 1 có cảm giác',N'Tốt ốm chân','2023-10-21','',1)
+insert into CongDung(tenCongDung,ghiChu,ngayTao,ngaySua,trangThai) values(N'Tăng sự êm chân, giảm thiểu sự chấn thương',N'Tốt ốm chân','2023-10-02','',1)
+
+select * from CongDung
+
 ---insert bảng chất liệu
 
 insert into ChatLieu(tenChatLieu,ghiChu,ngayTao,ngaySua,trangThai) values(N'Chất liệu da Kangaroo',N'Chất liệu da sản phẩm này tốt','2023-12-12','',1)
@@ -382,6 +399,18 @@ insert into ChatLieu(tenChatLieu,ghiChu,ngayTao,ngaySua,trangThai) values(N'Ch�
 insert into ChatLieu(tenChatLieu,ghiChu,ngayTao,ngaySua,trangThai) values(N'Chất liệu Calfskin Leather',N'Đắt tiền','2023-12-12','',1)
 
 select * from ChatLieu
+
+---insert into bảng Hướng dẫn bảo quản
+insert into HuongDanBaoQuan(tenHuongDanBaoQuan,ghiChu,ngayTao,ngaySua,trangThai) values(N'Để nơi khô thoáng','','2023-12-12','',1);
+insert into HuongDanBaoQuan(tenHuongDanBaoQuan,ghiChu,ngayTao,ngaySua,trangThai) values(N'Tránh nơi ẩm mốc','','2023-12-12','',1);
+insert into HuongDanBaoQuan(tenHuongDanBaoQuan,ghiChu,ngayTao,ngaySua,trangThai) values(N'Bảo quản giày thể thao trong hộp đựng giày.','','2023-12-12','',1);
+insert into HuongDanBaoQuan(tenHuongDanBaoQuan,ghiChu,ngayTao,ngaySua,trangThai) values(N'Sử dụng sản phẩm hỗ trợ Bọt làm sạch. Xịt khử mùi. Xịt nano','','2023-12-12','',1);
+insert into HuongDanBaoQuan(tenHuongDanBaoQuan,ghiChu,ngayTao,ngaySua,trangThai) values(N'Sử dụng giấy báo để giữ form giày','','2023-12-12','',1);
+insert into HuongDanBaoQuan(tenHuongDanBaoQuan,ghiChu,ngayTao,ngaySua,trangThai) values(N'Không giặt giày thường xuyên và phơi giày dưới ánh nắng','','2023-12-12','',1);
+insert into HuongDanBaoQuan(tenHuongDanBaoQuan,ghiChu,ngayTao,ngaySua,trangThai) values(N'Áp dụng các mẹo làm sạch giày','','2023-12-12','',1);
+
+select * from HuongDanBaoQuan
+
 ---insert into bảng lót giầy
 insert into LotGiay(tenLotGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Lót giầy Mika','Tốt','2021-12-12','',1)
 insert into LotGiay(tenLotGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Lót giầy Miko','Tốt','2021-12-12','',1)
@@ -395,8 +424,34 @@ insert into LotGiay(tenLotGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Lót g
 
 select * from LotGiay
 
+---insert into cổ giẩy
+insert into CoGiay(tenCoGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Cổ giầy cao Mizuno','Ôm sát cổ chân','2023-12-12','',1)
+insert into CoGiay(tenCoGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Cổ giầy thấp Mizuno','Ôm khít cổ chân','2023-12-12','',1)
+insert into CoGiay(tenCoGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Cổ giầy trung Mizuno','','2023-12-12','',1)
+insert into CoGiay(tenCoGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Cổ giầy cao Simo','','2023-12-12','',1)
+insert into CoGiay(tenCoGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Cổ giầy cao Mika','Ôm sát cổ chân','2023-12-12','',1)
+insert into CoGiay(tenCoGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Cổ giầy thấp Mika','Ôm sát cổ chân','2023-12-12','',1)
+insert into CoGiay(tenCoGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Cổ giầy cao Miko','Ôm sát cổ chân','2023-12-12','',1)
+insert into CoGiay(tenCoGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Cổ giầy thấp Miko dưới gót','Ôm sát cổ chân','2023-12-12','',1)
+insert into CoGiay(tenCoGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Cổ giầy cao Mizuno 5D qua gót','Ôm sát cổ chân','2023-12-12','',1)
+
+select * from CoGiay
+
+---insert into bảng Đế giầy
+
+insert into DeGiay(tenDeGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Giày đế đinh FG',N'Tốt','2021-12-02','',1)
+insert into DeGiay(tenDeGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Giày đế đinh SG' ,N'Tốt','2021-12-2','',1)
+insert into DeGiay(tenDeGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Giày đế đinh HG' ,N'Tốt','2021-12-2','',1)
+insert into DeGiay(tenDeGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Giày đế đinh MG' ,N'Tốt','2021-12-2','',1)
+insert into DeGiay(tenDeGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Giày đế đinh AG' ,N'Tốt','2021-12-2','',1)
+insert into DeGiay(tenDeGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Giày đế đinh TF' ,N'Tốt','2021-12-2','',1)
+insert into DeGiay(tenDeGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Giày đế đinh IC' ,N'Tốt','2021-12-2','',1)
+insert into DeGiay(tenDeGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Giày đế đinh BC' ,N'Tốt','2021-12-2','',1)
+
+select * from DeGiay
 
 ---insert into dây giầy
+
 insert into DayGiay(tenDayGiay,chieuDaiDayGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Dây dây Mizuno xanh','800mm','','','',1)
 insert into DayGiay(tenDayGiay,chieuDaiDayGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Dây dây Mika ','1m','','','',1)
 insert into DayGiay(tenDayGiay,chieuDaiDayGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Dây dây Miko ','600mm','','','',1)
@@ -406,7 +461,21 @@ insert into DayGiay(tenDayGiay,chieuDaiDayGiay,ghiChu,ngayTao,ngaySua,trangThai)
 insert into DayGiay(tenDayGiay,chieuDaiDayGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Dây dây 6D ','300mm','','','',1)
 insert into DayGiay(tenDayGiay,chieuDaiDayGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Dây dây cao cấp ','400mm','','','',1)
 insert into DayGiay(tenDayGiay,chieuDaiDayGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Dây dây vải ','1m2','','','',1)
+
 select * from DayGiay
+
+---insert into trọng lượng
+
+insert into TrongLuong(tenTrongLuong,ghiChu,ngayTao,ngaySua,trangThai) values('140G',N'Nhẹ','2023-12-10','',1)
+insert into TrongLuong(tenTrongLuong,ghiChu,ngayTao,ngaySua,trangThai) values('150G',N'Nhẹ','2023-12-10','',1)
+insert into TrongLuong(tenTrongLuong,ghiChu,ngayTao,ngaySua,trangThai) values('150G',N'','2023-12-10','',1)
+insert into TrongLuong(tenTrongLuong,ghiChu,ngayTao,ngaySua,trangThai) values('160G',N'Nhẹ','2023-12-10','',1)
+insert into TrongLuong(tenTrongLuong,ghiChu,ngayTao,ngaySua,trangThai) values('190G',N'','2023-12-10','',1)
+insert into TrongLuong(tenTrongLuong,ghiChu,ngayTao,ngaySua,trangThai) values('170G',N'Nhẹ','2023-12-10','',1)
+insert into TrongLuong(tenTrongLuong,ghiChu,ngayTao,ngaySua,trangThai) values('180G',N'','2023-12-10','',1)
+insert into TrongLuong(tenTrongLuong,ghiChu,ngayTao,ngaySua,trangThai) values('200G',N'','2023-12-10','',1)
+
+select * from TrongLuong
 
 ---insert into thương hiệu 
 
@@ -422,6 +491,8 @@ insert into ThuongHieu(tenThuongHieu,ghiChu,ngayTao,ngaySua,trangThai) values(N'
 select * from ThuongHieu
 
 ---insert dữ liệu bảng giầy thể thao
+
+
 ---insert into dữ liệu bảng màu sắc 
 insert into MauSac(tenMauSac,ghiChu,ngayTao,ngaySua,trangThai) values(N'Đỏ','','','','')
 insert into MauSac(tenMauSac,ghiChu,ngayTao,ngaySua,trangThai) values(N'Cam','','','','')
@@ -440,18 +511,53 @@ insert into Size(size,ghiChu,ngayTao,ngaySua,trangThai) values('43','','','','')
 insert into Size(size,ghiChu,ngayTao,ngaySua,trangThai) values('44','','','','')
 insert into Size(size,ghiChu,ngayTao,ngaySua,trangThai) values('45','','','','')
 
+---insert into dữ liệu bảng đinh tán giầy
+insert into DinhTanGiay(tenDinhTanGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Đinh tán giầy 12cm loại vừa','','','',1)
+insert into DinhTanGiay(tenDinhTanGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Đinh tán giầy cỡ lớn','','','',1)
+insert into DinhTanGiay(tenDinhTanGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Đinh tán giầy cỡ vừa 6 mắt','','','',1)
+insert into DinhTanGiay(tenDinhTanGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Đinh tán giầy 12 mắt đinh loại nhỏ','','','',1)
+insert into DinhTanGiay(tenDinhTanGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Đinh tán giầy 12cm loại vừa','','','',1)
+insert into DinhTanGiay(tenDinhTanGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Đinh tán giầy cao cấp GTA','','','',1)
+insert into DinhTanGiay(tenDinhTanGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Đinh tán giầy loại trung phổ biến','','','',1)
+insert into DinhTanGiay(tenDinhTanGiay,ghiChu,ngayTao,ngaySua,trangThai) values(N'Đinh tán giầy Kio 10 mắt','','','',1)
 
+select * from DinhTanGiay
 
-INSERT INTO KhachHang (maKhachHang, Url_Image, email, matKhau, tenKhachHang, gioiTinh, ngaySinh, soDienThoai, diaChi, thanhPho, huyen, xa, ghiChu, ngayTao, ngaySua, trangThai)
-VALUES 
-    ('KH001', NULL, 'khach1@example.com', 'password1', 'Nguyen Van A', 'Nam', '1990-01-01', '0123456789', '123 Main St', 'Hanoi', 'Hoan Kiem', 'Dong Xuan', 'VIP customer', '2024-10-01', NULL, 1),
-    ('KH002', NULL, 'khach2@example.com', 'password2', 'Le Thi B', 'Nu', '1992-02-02', '0987654321', '456 Side St', 'HCMC', 'District 1', 'Ben Nghe', 'Regular customer', '2024-10-02', NULL, 1),
-    ('KH003', NULL, 'khach3@example.com', 'password3', 'Tran Van C', 'Nam', '1985-03-03', '0112233445', '789 Another St', 'Da Nang', 'Hai Chau', 'Thach Thang', 'New customer', '2024-10-03', NULL, 0),
-    ('KH004', NULL, 'khach4@example.com', 'password4', 'Pham Thi D', 'Nu', '1998-04-04', '0122334455', '321 Market St', 'Hue', 'Phu Vang', 'Phu Thuong', 'Frequent buyer', '2024-10-04', NULL, 1),
-    ('KH005', NULL, 'khach5@example.com', 'password5', 'Vo Van E', 'Nam', '2000-05-05', '0988776655', '654 River Rd', 'Can Tho', 'Ninh Kieu', 'An Khanh', 'Preferred customer', '2024-10-05', NULL, 1);
+---insert into bảng kiểu buộc
+insert into KieuBuoc(tenKieuBuoc,ghiChu,ngayTao,ngaySua,trangThai) values(N'Kiểu thắt dây giày đá bóng chéo','','','',1)
+insert into KieuBuoc(tenKieuBuoc,ghiChu,ngayTao,ngaySua,trangThai) values(N'Kiểu thắt xỏ dây nút chạy','','','',1)
+insert into KieuBuoc(tenKieuBuoc,ghiChu,ngayTao,ngaySua,trangThai) values(N'Kiểu thắt dây giày giấu nút','','','',1)
+insert into KieuBuoc(tenKieuBuoc,ghiChu,ngayTao,ngaySua,trangThai) values(N'Kiểu buộc dây giày cố định lòng bàn chân','','','',1)
+insert into KieuBuoc(tenKieuBuoc,ghiChu,ngayTao,ngaySua,trangThai) values(N'Kiểu thắt dây giày Ladder Lacing','','','',1)
+insert into KieuBuoc(tenKieuBuoc,ghiChu,ngayTao,ngaySua,trangThai) values(N'Kiểu buộc thắt dây chéo vắt lên trên','','','',1)
+insert into KieuBuoc(tenKieuBuoc,ghiChu,ngayTao,ngaySua,trangThai) values(N'Kiểu buộc giây giày theo phương pháp giấu dây','','','',1)
+
+select * from KieuBuoc
 
 select * from Users
 ---insert dữ liệu cho bảng giầy thể thao
+insert into GiayTheThao(Id_Form,Id_CongDung,Id_ChatLieu,Id_HuongDanBaoQuan,Id_LotGiay,Id_CoGiay,Id_DeGiay,Id_DayGiay,Id_TrongLuong,Id_ThuongHieu,Id_KieuBuoc,Id_DinhTanGiay,gioiTinh,tenGiayTheThao,giaBan,moTa,ghiChu,trangThai) values('B151C8E4-BE9F-49D0-8C82-069C8EBA5259','6491BB3D-0B2E-431B-B178-16136E844CFE','550BE6F5-C382-4997-B2DD-1356F644B1EA','D06E068B-798E-4F66-B61B-3A3BFB4B671C','BFB447C5-5CA3-46CD-9759-13485C963711','27C73101-07E0-43B4-A494-0F16B543C8F1','709B5E0C-73A3-4357-A484-0DD68523C251','B84A955C-944E-4634-A089-0562616F035F','761F9DB7-6D7A-4342-B8CF-1A3A235E9A45','EFBD5AAC-BCCF-405D-81B3-05DD9449283C','09A47446-BAA1-43F0-B09A-277FC8D4EF7F','D5D61594-AC5D-4F80-8E54-0B8EE4E0B345','Nam',N'Giầy đá bóng sân NIKE ZOOM',12000000,'','',1)
+
+insert into GiayTheThao(Id_Form,Id_CongDung,Id_ChatLieu,Id_HuongDanBaoQuan,Id_LotGiay,Id_CoGiay,Id_DeGiay,Id_DayGiay,Id_TrongLuong,Id_ThuongHieu,Id_KieuBuoc,Id_DinhTanGiay,gioiTinh,tenGiayTheThao,giaBan,moTa,ghiChu,trangThai) values(
+'E4F933C1-E365-4CD9-8A57-151C845EC7EF',
+'6686F069-BEA2-4EF7-ABA6-32808E99CC0D',
+'06768B93-FDA5-4007-8E84-7E4B22F4103B',
+'F4AE36A9-6982-42C3-B47A-442E21F81733',
+'E23DE32A-539F-4D16-955E-19C0077CB912',
+'5B78977B-2922-4DA2-8AE5-1C0467B74CC7',
+'A8C46524-6F4B-42A0-B25A-4B9EFCBE2F07',
+'83E37B17-2440-4B68-A4DD-929152EFAE2D',
+'AECD46E6-EBB8-4761-BC35-9D19CA66721D',
+'99838E11-5EB8-40BF-ADB6-4FF1E046017C',
+'6A98EF23-E86E-4D1E-A428-5392B22AB26F',
+'679C8270-9A9C-4BC2-B4BF-A5B7606ABA63',
+'Nữ',N'Giầy đá bóng tầm trung Mizuno 3 sọc',
+15000000,
+'',
+'',
+1)
+
+
 
 SELECT SUM(hd.thanhTien) FROM HoaDon hd WHERE hd.trangThai = 3
 select sum(hd.thanhTien) from HoaDon hd
@@ -474,7 +580,8 @@ select * from KhachHang
 select * from HoaDon
 select * from GiayTheThaoChiTiet
 select * from HoaDonChiTiet
-
+select * from ViTien
+select * from GiaoDichViChiTiet
 select * from GioHang
 select * from GioHangChiTiet
 select * from HoaDon
@@ -484,10 +591,12 @@ delete from GioHangChiTiet
 delete from HoaDon
 delete from HoaDonChiTiet
 
-
+select * from GiaoDichViChiTiet
+select * from ViTien
 
 select * from GiayTheThaoChiTiet
 select * from Users
+select * from PhieuGiaoHang
 select * from KhachHang
 select * from Users
 
@@ -569,7 +678,7 @@ delete GiayTheThao where tenGiayTheThao = 'Nike Air Force'
 select * from Users
 select * from KhachHang
 Insert into Users(maUser, email, matKhau, tenUser, gioiTinh, ngaySinh, soDienThoai, diaChi, trangThai, role)
-values (N'NV001','tungnv@gmail.com',123456789, 'tung01', N'Nam', '2003-11-11', 0968433742, N'namdinh', 0, 'ADMIN')
+values (N'NV001','tungnv@gmail.com',123456789, 'tungdz', N'Nam', '2003-11-11', 0968433742, N'Nam DInh', 0, 'ADMIN')
 
 -- on
 select * from hoadon where maHoaDon = 'MaHD233750' 
